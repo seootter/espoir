@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans KR", "돋움", dotum, sans-serif;
+    color: #252525;
+    letter-spacing: -0.8px;
+    margin: 0 auto;
+    font-size: 18px;
+    background-color: #ffffff;
+}
+
+/* header */
+/* 카카오 계졍 연동 */
+.kakaoInfo {
+    display: block;
+    border-bottom: 1px solid #f0f0f0;
+    box-shadow: 0 0 30px 0 rgb(255 255 255 / 90%);
+}
+
+.kakaoBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 54px;
+    padding: 15px;
+}
+
+h1 {
+    font-size: 18px;
+    line-height: 54px;
+    font-weight: 500;
+    display: block;
+    text-align: center;
+    flex: 1;
+    position: relative;
+    right: 10px;
+}
+
+.kakaoBox button {
+    background-color: white;
+    border: none;
+}
+
+.kakaoBox button:hover {
+    cursor: pointer;
+}
+
+.kakaoBox img {
+    width: 23px;
+    height: 23px;
+}
+
+/* section */
+section#allBox {
+    padding: 10px 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #252525;
+}
+
+div {
+    display: block;
+}
+ 
+/* text */
+.text {
+    padding-top: 20px;
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -1.2px;
+    line-height: 1.7;
+}
+
+p {
+    padding-top: 5px;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+/* 카카오 간편 가입 */
+.buttonInfo {
+    margin-bottom: 30px;
+}
+
+.buttonBox a {
+    display: block;
+    background-color: #ffe500;
+    color: #3c1e1e;
+    border-radius: 6px;
+    width: auto;
+    height: 54px;
+    line-height: 15px;
+    font-weight: 400;
+}
+
+.buttonBox a:hover {
+    cursor: pointer;
+}
+
+.buttonBox a img {
+    width: 22px;
+    height: 20px;
+    position: relative;
+    left: 28px;
+    top: 17px;
+}
+
+.buttonBox a span {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    position: relative;
+    top: -2px;
+}
+
+
+/* 미디어쿼리 */
+    @media screen and (min-width: 768px) {
+    .kakaoBox, section {
+        max-width: 520px;
+        margin: 0 auto;
+        font-size: 16px;
+    }
+}
