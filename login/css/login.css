@@ -98,6 +98,10 @@ div {
     display: none;
 }
 
+.keyboardInfo:hover {
+    cursor: pointer;
+}
+
 /* 정보 입력칸 */
 .inputId, .inputPw {
     margin-bottom: 13px;
@@ -111,7 +115,7 @@ div {
     bottom: 34px;
     width: 17px;
     height: 17px;
-    background-color: #ffffff;
+    background-color: transparent;
     padding: 2px;
 
     display: none;
@@ -174,7 +178,7 @@ button.loginButton:hover {
     margin-bottom: 14px;
 }
 
-.saveBox {
+.saveBox:hover {
     cursor: pointer;
 }
 
@@ -183,6 +187,10 @@ button.loginButton:hover {
     height: 23px;
     position: relative;
     right: 3px;
+}
+
+#checkOff img {
+    display: inline-block;
 }
 
 #checkOn img {
@@ -197,7 +205,7 @@ button.loginButton:hover {
 
 .saveInfo .save {
     font-size: 16px;
-    padding-left: 7px;
+    padding-left: 4px;
     position: relative;
     bottom: 4px;
 }

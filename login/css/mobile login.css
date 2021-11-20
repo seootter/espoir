@@ -83,7 +83,7 @@ div {
     bottom: 34px;
     width: 17px;
     height: 17px;
-    background-color: #ffffff;
+    background-color: transparent;
     padding: 2px;
 
     display: none;
@@ -99,6 +99,12 @@ input#name, input#tel {
     height: 50px;
     font-size: 14px;
     letter-spacing: -0.7px;
+}
+
+input#name:focus, input#tel:focus {
+    border-color: #5c95f0;
+    caret-color: #5c95f0;;
+    outline: 0;
 }
 
 input::placeholder {

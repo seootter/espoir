@@ -21,7 +21,7 @@
   <!-- section -->
    <section id="allBox">
       <!-- pc 키보드 보기 -->
-      <section class="keyboardInfo">
+      <section class="keyboardInfo" onclick="keyboardOpen()">
          <p><span class="keyboardTxt">pc 키보드 보기</span><span class="keyboardOpen"><img src="imges/btn_keyboard_open.png"></span></p>
          <span class="keyboard"><img src="imges/img_keyboard.png"></span>
       </section>
@@ -29,17 +29,17 @@
       <!-- 정보 입력칸 -->
       <section class="inputInfo">
          <div class="inputBox">
-            <form action="" method="" name="inputUser" keydown="inputIdPw()">
+            <form action="" method="" name="inputUser">
                <!-- 아이디 -->
                <div class="inputId">
-                     <input type="text" id="id" minlength="4" maxlength="12" placeholder="아이디 입력">
-                     <img src="imges/btn_textfield_delete.png">
+                     <input type="text" id="id" minlength="4" maxlength="12" placeholder="아이디 입력" onkeydown="inputId()"> 
+                     <img src="imges/btn_textfield_delete.png" onclick="deleteBtnId()">
                </div>
 
                <!-- 비밀번호 -->
                <div class="inputPw">
-                     <input type="password" id="password" minlength="8" maxlength="16" placeholder="비밀번호 입력 (영문, 숫자, 특수문자 조합)">
-                     <img src="imges/btn_textfield_delete.png">
+                     <input type="password" id="password" minlength="8" maxlength="16" placeholder="비밀번호 입력 (영문, 숫자, 특수문자 조합)" onkeydown="inputPw()">
+                     <img src="imges/btn_textfield_delete.png" onclick="deleteBtnPw()">
                </div>
             </div>
       
@@ -51,8 +51,8 @@
       <!-- 아이디 저장 -->
       <section class="saveInfo">
          <form action="" method="" name="agreeBox">
-            <div class="saveBox" onclick="check()">
-               <input type="checkbox">
+            <div class="saveBox" onclick="saveClick()">
+               <input type="checkbox" name="save">
                <label><span id="checkOff"><img src="imges/btn_check_off.png"></span><span id="checkOn"><img src="imges/btn_check_on.png"></span><span class="save">아이디 저장</span></label>
             </div>
       </section>
@@ -80,7 +80,7 @@
                   </button>
                </li>
                <li>
-                  <button id="more">
+                  <button id="more" onclick="moreBtn()">
                   <img src="imges/btn_login_more.png">
                   <p>더보기</p>
                   </button>
@@ -122,7 +122,7 @@
             </ul>
          </div>
 
-         <div class="buttonClose">
+         <div class="buttonClose" onclick="closeMore()">
              <button id="colse">닫기</button>
          </div>
      </div>

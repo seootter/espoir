@@ -6,6 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>휴대폰 로그인ㅣ옴니통합회원</title>
    <link rel="stylesheet" href="css/mobile login.css">
+   <script src="js/mobile login.js"></script>
 </head>
 <body>
     <!-- header -->    
@@ -25,14 +26,14 @@
                 <form action="" method="" name="inputUser">
                     <!-- 이름 -->
                     <div class="inputName">
-                        <input type="text" id="name" placeholder="이름 (두 자 이상 입력)">
-                        <img src="imges/btn_textfield_delete.png">
+                        <input type="text" id="name" placeholder="이름 (두 자 이상 입력)" onkeydown="inputName()">
+                        <img src="imges/btn_textfield_delete.png" onclick="deleteBtnName()">
                     </div>
 
                     <!-- 휴대폰번호 -->
                     <div class="inputTel">
-                        <input type="tel" id="tel" maxlength="11" placeholder="휴대폰 번호 입력 ('-' 생략)">
-                        <img src="imges/btn_textfield_delete.png">
+                        <input type="tel" id="tel" maxlength="11" placeholder="휴대폰 번호 입력 ('-' 생략)" onkeydown="inputTel()">
+                        <img src="imges/btn_textfield_delete.png" onclick="deleteBtnTel()">
                     </div>
                </div>
          
