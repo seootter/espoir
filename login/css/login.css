@@ -178,7 +178,7 @@ button.loginButton:hover {
     margin-bottom: 14px;
 }
 
-.saveBox:hover {
+.saveBox label:hover {
     cursor: pointer;
 }
 
@@ -240,7 +240,7 @@ button.loginButton:hover {
     font-family: "Noto Sans KR", "돋움", dotum, sans-serif;
 }
 
-.snsButtonBox button:hover {
+.snsButtonBox li button:hover {
     cursor: pointer;
 }
 
@@ -301,6 +301,10 @@ button.loginButton:hover {
     border: none;
     display: flex;
     align-items: center;
+}
+
+#snsMoreBox ul li button:hover {
+    cursor: pointer;
 }
 
 #snsMoreBox ul li img {
