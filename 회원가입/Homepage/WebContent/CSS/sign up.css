@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans KR", "돋움", dotum, sans-serif;
+    color: #252525;
+    letter-spacing: -0.8px;
+    margin: 0 auto;
+    font-size: 18px;
+    background-color: #ffffff;
+}
+
+/* header */
+/* 회원 가입 */
+.signUpInfo {
+    display: block;
+    border-bottom: 1px solid #f0f0f0;
+    box-shadow: 0 0 30px 0 rgb(255 255 255 / 90%);
+}
+
+.signUpBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 54px;
+    padding: 15px;
+}
+
+h1 {
+    font-size: 18px;
+    line-height: 54px;
+    font-weight: 500;
+}
+
+.signUpBox button {
+    background-color: white;
+    border: none;
+}
+
+.signUpBox button:hover {
+    cursor: pointer;
+}
+
+.signUpBox img {
+    width: 23px;
+    height: 23px;
+}
+
+/* section */
+section#allBox {
+    padding: 10px 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #252525;
+}
+
+div {
+    display: block;
+}
+ 
+/* 뷰티포인트 */
+section.beautyPointInfo {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+p.beautyPoint {
+    padding-top: 10px;
+    font-size: 18px;
+    line-height: 1.4;
+
+}
+
+/* 인증 방식 */
+section.methodInfo {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+section strong {
+    display: block;
+    font-weight: 500;
+    padding-top: 15px;
+    font-size: 18px;
+}
+
+.methodBox a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    border: 1px solid #d3d3d3;
+    border-radius: 6px;
+    text-decoration: none;
+    width: auto;
+    height: 80px;
+    padding: 25px;
+}
+
+.methodBox a:hover {
+    cursor: pointer;
+}
+
+.methodBox a span.text {
+    display: flex;
+    font-size: 18px;
+    position: relative;
+    left: 1em;
+    flex: 1 2;
+    font-weight: 500;
+}
+
+.methodBox a img {
+    width: 29px;
+    height: 45px;
+}
+
+.methodBox a span img {
+    width: 9px;
+    height: 16px;
+}
+
+/* 카카오 간편 가입 */
+section.kakaoInfo {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.kakaoBox a {
+    display: block;
+    background-color: #ffe500;
+    color: #3c1e1e;
+    border-radius: 6px;
+    width: auto;
+    height: 54px;
+    line-height: 15px;
+    font-weight: 400;
+}
+
+.kakaoBox a:hover {
+    cursor: pointer;
+}
+
+.kakaoBox a img {
+    width: 22px;
+    height: 20px;
+    position: relative;
+    left: 28px;
+    top: 17px;
+}
+
+.kakaoBox a span {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+}
+
+
+/* 미디어쿼리 */
+    @media screen and (min-width: 768px) {
+    .signUpBox, section {
+        max-width: 520px;
+        margin: 0 auto;
+        font-size: 16px;
+    }
+}
