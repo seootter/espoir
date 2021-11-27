@@ -185,53 +185,6 @@ function pwPreCloseBtn() {
     pwPreBox.style.display = "none";
 }
 
-// 약관 전체동의 버튼
-function checkOffBtn() {
-    let checkOffBtn = document.querySelector("#checkOffBig img");
-    let checkOnBtn = document.querySelector("#checkOnBig img");
-    let chOff = document.querySelectorAll(".chOff");
-
-    if(checkOffBtn.style.display == "inline-block" || checkOffBtn.style.display == "") {
-        checkOffBtn.style.display = "none";
-        checkOnBtn.style.display = "inline-block";
-    } else if(checkOnBtn.style.display == "inline-block") {
-        checkOnBtn.style.display = "none";
-        checkOffBtn.style.display = "inline-block";
-    }
-}
-
-
-// 약관 동의 접기
-function boxFlodBtn() {
-    let boxFlod = document.querySelector(".boxFold");
-    let boxOpen = document.querySelector(".boxOpen");
-    let clauseInfo = document.querySelector(".clauseInfo");
-    let agreeList1 = document.querySelector("#agreeBeauty");
-    let agreeList2 = document.querySelector("#agreeMember");
-    let agreeList3 = document.querySelector(".sns");
-    let perPoint = document.querySelector("#perpoint");
-
-    if(boxOpen.style.display == "none" || boxOpen.style.display == "") {
-        boxFlod.style.display = "none";
-        boxOpen.style.display = "block";
-        clauseInfo.style.height = "59px";
-        agreeList1.style.display = "none";
-        agreeList2.style.display = "none";
-        agreeList3.style.display = "none";
-        perPoint.style.display = "none";
-    } else if(boxOpen.style.display == "block") {
-        boxFlod.style.display = "block";
-        boxOpen.style.display = "none";
-        clauseInfo.style.height = "auto";
-        agreeList1.style.display = "block";
-        agreeList2.style.display = "block";
-        agreeList3.style.display = "block";
-        perPoint.style.display = "block";
-    } else {
-        return;
-    }
-}
-
 
 // 뷰티포인트 통합회원 약관 더보기
 function beautyMoreBtn() {
@@ -313,6 +266,3 @@ function preCloseBtn() {
 
     preBox.style.display = "none";
 }
-
-// 가입 버튼
-

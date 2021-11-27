@@ -1,0 +1,38 @@
+package signup;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.LinkedHashMap;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/Homepage/signup/signup2")
+public class SignUp2 extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	LinkedHashMap<String, String> map;
+//	private ArrayList<String> MemberInfo;
+//       // 아이디 중복 확인
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html;charset=UTF-8");
+		PrintWriter out = response.getWriter();
+		
+		String id = request.getParameter("id");
+		String pw = request.getParameter("password");
+		
+		if(!map.containsKey(id)) {
+			// 아이디가 중복되지 않으면 저장
+			map.put(id, pw);
+			
+			out.print("뷰티포인트 통합회원 아이디 등록이 완료 되었습니다.");
+		} else {
+			// 아이디가 중복되면 오류코드
+			response.setStatus(HttpServletResponse.SC_PRECONDITION_FAILED);
+		}
+		
+		out.close();
+	}
+}

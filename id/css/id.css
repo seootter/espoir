@@ -16,39 +16,42 @@ body {
 }
 
 /* header */
-/* 회원 가입 */
-.idInfo {
+/* 아이디 찾기 */
+.IdInfo {
     display: block;
     border-bottom: 1px solid #f0f0f0;
     box-shadow: 0 0 30px 0 rgb(255 255 255 / 90%);
 }
 
-.idBox {
+.IdBox{
     display: flex;
+    justify-content: space-between;
     align-items: center;
     height: 54px;
     padding: 15px;
 }
 
 h1 {
-    display: flex;
     font-size: 18px;
     line-height: 54px;
     font-weight: 500;
-    justify-content: center;
+    display: block;
+    text-align: center;
     flex: 1;
+    position: relative;
+    right: 10px;
 }
 
-.idBox button {
+.IdBox button {
     background-color: white;
     border: none;
 }
 
-.idBox button:hover {
+.IdBox button:hover {
     cursor: pointer;
 }
 
-.idBox img {
+.IdBox img {
     width: 23px;
     height: 23px;
 }
@@ -67,41 +70,143 @@ div {
     display: block;
 }
 
-/* h2 */
-.h2Box {
-    padding-top: 10px;
-    padding-bottom: 20px;
-} 
+/* text */
+.text {
+    padding: 10px 0 20px;
+}
 
-h2 {
+.text p {
     font-size: 22px;
     font-weight: 700;
+    line-height: 1.4;
     letter-spacing: -1px;
 }
 
+
 /* 정보 입력칸 */
-.inputBox form {
-    display: block;
+.inputName, .inputTel {
     margin-bottom: 13px;
 }
 
-input {
-    height: 50px;
+/* 입력할 때 보이는 x */
+.inputName img, .inputTel img {
+    position: relative;
+    float: right;
+    right: 13px;
+    bottom: 34px;
+    width: 17px;
+    height: 17px;
+    background-color: transparent;
+    padding: 2px;
+
+    display: none;
+}
+
+.inputName img:hover, .inputTel img:hover {
+    cursor: pointer;
+}
+/* == x 부분 끝 ==*/
+
+input#name, input#tel {
+    display: block;
+    width: 100%;
     border: 1px solid #e6e6e6;
     border-radius: 6px;
+    padding: 0 12px;
+    height: 50px;
+    font-size: 14px;
+    letter-spacing: -0.7px;
+}
+
+input#name:focus, input#tel:focus {
+    border-color: #5c95f0;
+    caret-color: #5c95f0;;
+    outline: 0;
+}
+
+input::placeholder {
+    color: #c7c7c7;
+    font-size: 16px;
+    letter-spacing: -0.7px;
+    line-height: 40px;
+    font-family: "Noto Sans KR", "돋움", dotum, sans-serif;
+}
+
+/* 인증번호 발송 */
+.sendSns {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+button.send {
+    background-color: #f0f0f0;
+    border: 1px solid #f0f0f0;
+    border-radius: 6px;
     width: 100%;
+    height: 54px;
+    font-family: "Noto Sans KR", "돋움", dotum, sans-serif;
+    letter-spacing: -0.8px;
+    font-weight: 400;
+}
+
+button.send span {
+    font-size: 18px;
+    color: #c6c6c6;
+}
+
+button.send:hover {
+    cursor: not-allowed;
 }
 
 
-/* 회원 가입 이동 */
+/* 회원가입 버튼 */
+.singup {
+    margin-top: 40px;
+}
 
+.singup button {
+    border: 1px solid #d3d3d3;
+    border-radius: 6px;
+    background-color: #fff;
+    padding: 0 20px;
+    width: 100%;
+    height: 44px;
+}
+
+.singupButton p {
+    font-size: 16px;
+    letter-spacing: -0.7px;
+    font-family: "Noto Sans KR", "돋움", dotum, sans-serif;
+}
+
+.singupButton #noMember {
+    float: left;
+}
+
+.singupButton #strong {
+    font-weight: 500;
+    float: right;
+}
+
+.singupButton #strong span {
+    position: relative;
+    padding-right: 7px;
+}
+
+.singupButton #strong img {
+    width: 7px;
+    height: 12px;
+}
+
+.singup button:hover {
+    cursor: pointer;
+}
 
 /* 미디어쿼리 */
 @media screen and (min-width: 768px) {
-    .idBox, section {
+    .IdBox, section {
         max-width: 520px;
         margin: 0 auto;
         font-size: 16px;
     }
 }
-

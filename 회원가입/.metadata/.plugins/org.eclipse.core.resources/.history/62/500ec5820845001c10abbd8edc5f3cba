@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>회원가입ㅣ옴니통합회원</title>
+   <link rel="stylesheet" href="CSS/sign up.css">
+</head>
+<body>
+    <!-- header -->    
+    <!-- 회원 가입 -->
+    <header class="signUpInfo">
+        <div class="signUpBox">
+            <button class="back"><img src="Images/btn_title_back.png"></button>
+            <h1>회원가입</h1>
+            <button class="close"><img src="Images/btn_title_close.png"></button>
+        </div>
+    </header>
+
+    <!-- section -->    
+    <!-- 뷰티포인트 -->
+    <section id="allBox">
+        <section class="beautyPointInfo">
+            <div class="beautyPointBox">
+                    <h2>뷰티포인트 회원가입</h2>
+                    <p class="beautyPoint">
+                    뷰티포인트 통합 아이디로 아모레퍼시픽 모든 브랜드의 온/오프 매장 <br>
+                    서비스를 이용하실 수 있습니다. <br>
+                    (만 14세 이상 부터 가입 가능합니다.)
+                    </p>
+            </div>
+        </section>
+
+        <!-- 인증 방식 -->
+        <section class="methodInfo">
+            <div class="methodBox">
+                <p class="method"><strong>회원가입 인증 방식을 선택해주세요.</strong></p>
+                <a href="#" id="mobile"><img src="Images/icon_mobile.png"><span class="text">휴대폰 인증</span><span><img src="Images/icon_signup_arrow_m.png"></span></a>
+                <a href="#" id="ipin"><img src="Images/icon_iPIN.png"><span class="text">아이핀 인증</span><span><img src="Images/icon_signup_arrow_m.png"></span></a>
+            </div>
+        </section>
+        
+        <!-- 카카오 간편 가입 -->
+        <section class="kakaoInfo">
+            <div class="kakaoBox">
+                <a href="#" class="kakao"><img src="Images/icon_kakaotalk.png"><span>카카오 계정 간편 가입</span></a>
+            </div>
+        </section>
+    </section>
+</body>
+</html>

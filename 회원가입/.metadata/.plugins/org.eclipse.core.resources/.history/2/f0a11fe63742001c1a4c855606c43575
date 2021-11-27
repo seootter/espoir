@@ -1,0 +1,28 @@
+package signup;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/signup2")
+public class SignUp2 extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	private ArrayList<memberInfo> MemberInfo = new ArrayList<memberInfo>();
+       // 아이디 중복 확인
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String id = request.getParameter("id");
+
+		// 아이디 중복 확인
+		if(MemberInfo.contains(id)) {
+			response.setStatus(401);
+		}else {
+			MemberInfo.add(id);
+		}
+	}
+
+}

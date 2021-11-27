@@ -125,6 +125,10 @@ input#id:focus, input#password:focus, input#passwordRe:focus {
     bottom: 4.37em;
 }
 
+#deleteId img:hover, #deletePw img:hover, #deletePwRe img:hover {
+    cursor: pointer;
+}
+
 /* == x 부분 끝 ==*/
 
 input#id, input#password, input#passwordRe {
@@ -412,7 +416,7 @@ p#pointPw {
     display: none;
 }
 
-.agreeFirst button span img {
+.boxFold {
     width: 18px;
     height: 18px;
 }
@@ -601,6 +605,7 @@ p#pointPw {
     margin: 0 5px;
     background-color: #f0f0f0;
     border: 1px solid #f0f0f0;
+    color: #c6c6c6;
     border-radius: 6px;
     width: 100%;
     height: 54px;
@@ -611,8 +616,6 @@ p#pointPw {
 
 input[value="회원가입"] {
     font-size: 18px;
-    color: #c6c6c6;
-
 }
 
 .joinTxt {
@@ -623,7 +626,7 @@ input[value="회원가입"] {
     font-size: 16px;
 }
 
-.join:hover {
+#join:hover {
     cursor: not-allowed;
 }
 

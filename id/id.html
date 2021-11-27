@@ -6,43 +6,53 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>아이디 찾기ㅣ옴니통합회원</title>
    <link rel="stylesheet" href="css/id.css">
+   <script src="js/id.js"></script>
 </head>
 <body>
     <!-- header -->    
     <!-- 아이디 찾기 -->
-    <header class="idInfo">
-        <div class="idBox">
-            <button class="back"><img src="imges/btn_title_back.png"></button>
-            <h1>아이디 찾기</h1>
-        </div>
-    </header>
+    <header class="IdInfo">
+      <div class="IdBox">
+          <button class="back"><img src="imges/btn_title_back.png"></button>
+          <h1>아이디 찾기</h1>
+      </div>
+  </header>
 
-    <!-- section -->    
-    <!-- h2 -->
-    <section id="allBox">
-        <section class="h2Box">
-            <h2>가입 시 입력한 정보로 아이디를 찾아보세요.</h2>
+  <!-- section -->
+      <section id="allBox">
+        <!-- text -->
+        <section class="text">
+            <p>가입 시 입력한 정보로 아이디를 찾아보세요.</p>
         </section>
-
         <!-- 정보 입력칸 -->
-        <section class="inputInfo">
+         <section class="inputInfo">
             <div class="inputBox">
-                <form action="" method="" name="inputName">
-                    <input type="text" id="name" minlength="2" placeholder="이름(두 자 이상 입력)">
-                </form>
-                <form action="" method="" name="inputTel">
-                <input type="tel" id="tel" maxlength="11" placeholder="휴대폰 번호 입력('-'생략)">
-                </form>
-                <button class="submit">인증번호 전송</button>
-            </div>
-        </section>
+                <form action="" method="" name="inputUser">
+                    <!-- 이름 -->
+                    <div class="inputName">
+                        <input type="text" id="name" placeholder="이름 (두 자 이상 입력)" onkeydown="inputName()">
+                        <img src="imges/btn_textfield_delete.png" onclick="deleteBtnName()">
+                    </div>
 
-        <!-- 회원 가입 이동 -->
-        <section>
-            <div class="signUpInfo">
-                <a href="#" class="signUpBox"><span class="text">아직 회원이 아니세요?</span><span class="signUp">회원가입<img src="imges/icon_signup_arrow.png"></span></a>
-            </div>
-        </section>
-    </section>  
+                    <!-- 휴대폰번호 -->
+                    <div class="inputTel">
+                        <input type="tel" id="tel" maxlength="11" placeholder="휴대폰 번호 입력 ('-' 생략)" onkeydown="inputTel()">
+                        <img src="imges/btn_textfield_delete.png" onclick="deleteBtnTel()">
+                    </div>
+               </div>
+         
+         <!-- 인증번호 발송 -->
+         <section class="sendSns">
+            <button class="send" disabled><span>인증번호 발송</span></button>
+         </section>
+
+         <!-- 회원가입 버튼 -->
+         <section class="singup">
+            <button class="singupButton">
+               <p id="noMember">아직 회원이 아니세요?</p>
+               <p id="strong"><span>회원가입</span><img src="imges/icon_signup_arrow.png"></p>
+            </button>
+         </section>
+     </section>
 </body>
 </html>

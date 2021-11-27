@@ -45,7 +45,7 @@
       
       <!-- 로그인 버튼 -->
       <section class="loginButtonBox">
-         <button class="loginButton"><span>로그인</span></button>
+         <button class="loginButton" disabled><span>로그인</span></button>
       </section>
 
       <!-- 아이디 저장 -->
@@ -80,7 +80,7 @@
                   </button>
                </li>
                <li>
-                  <button id="more" onclick="moreBtn()">
+                  <button id="more" onclick="moreBtn()" type="button">
                   <img src="imges/btn_login_more.png">
                   <p>더보기</p>
                   </button>
@@ -123,7 +123,7 @@
          </div>
 
          <div class="buttonClose">
-             <button id="colse" onclick="closeMore()">닫기</button>
+             <button id="colse" onclick="closeMore()" type="button">닫기</button>
          </div>
      </div>
      <div class="bg"></div>
@@ -142,7 +142,7 @@
       
       <!-- 회원가입 버튼 -->
       <section class="singup">
-         <button class="singupButton">
+         <button class="singupButton" type="button">
             <p id="noMember">아직 회원이 아니세요?</p>
             <p id="strong"><span>회원가입</span><img src="imges/icon_signup_arrow.png"></p>
          </button>

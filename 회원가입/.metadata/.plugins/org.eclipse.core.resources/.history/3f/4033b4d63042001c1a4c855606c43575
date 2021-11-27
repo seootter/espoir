@@ -1,0 +1,8 @@
+package signup;
+
+public class memberInfo {
+	private String ID;
+	private String PW;
+	
+	
+}

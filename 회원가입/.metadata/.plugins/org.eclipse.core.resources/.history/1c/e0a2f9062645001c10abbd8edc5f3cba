@@ -1,0 +1,615 @@
+@import
+	url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap')
+	;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* test */
+#id {
+	width: 21px;
+	height: 21px;
+	position: absolute;
+	margin-top: 3px;
+}
+
+body {
+	font-family: "Noto Sans KR", "돋움", dotum, sans-serif;
+	color: #252525;
+	letter-spacing: -0.8px;
+	margin: 0 auto;
+	font-size: 18px;
+	background-color: #ffffff;
+}
+
+/* header */
+/* 회원 가입 */
+.signUpInfo {
+	display: block;
+	border-bottom: 1px solid #f0f0f0;
+	box-shadow: 0 0 30px 0 rgb(255 255 255/ 90%);
+}
+
+.signUpBox {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 54px;
+	padding: 15px;
+}
+
+h1 {
+	font-size: 18px;
+	line-height: 54px;
+	font-weight: 500;
+	flex: 1;
+	display: block;
+	text-align: center;
+}
+
+.signUpBox button {
+	background-color: white;
+	border: none;
+}
+
+.signUpBox button:hover {
+	cursor: pointer;
+}
+
+.signUpBox img {
+	width: 23px;
+	height: 23px;
+}
+
+/* section */
+section#allBox {
+	padding: 10px 20px;
+}
+
+a {
+	text-decoration: none;
+	color: #252525;
+}
+
+div {
+	display: block;
+}
+
+/* 뷰티포인트 통합 아이디 등록 */
+section.integratedIDInfo {
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+
+h2 {
+	font-size: 22px;
+	font-weight: 700;
+	letter-spacing: -1px;
+}
+
+p.integratedID {
+	padding-top: 10px;
+	font-size: 18px;
+	line-height: 1.4;
+}
+
+/* 정보 입력칸 */
+.inputId, .inputPw, .inputPwRe {
+	margin-bottom: 13px;
+}
+
+/* 입력할 때 보이는 x */
+.inputId img, .inputPw img, .inputPwRe img {
+	position: relative;
+	float: right;
+	right: 13px;
+	bottom: 34px;
+	width: 17px;
+	height: 17px;
+	background-color: #ffffff;
+	padding: 2px;
+	display: none;
+}
+/* == x 부분 끝 ==*/
+input#id, input#password, input#passwordRe {
+	display: block;
+	width: 100%;
+	border: 1px solid #e6e6e6;
+	border-radius: 6px;
+	padding: 0 12px;
+	height: 50px;
+	font-size: 14px;
+	letter-spacing: -0.7px;
+}
+
+input::placeholder {
+	color: #c7c7c7;
+	font-weight: 500;
+	font-size: 15px;
+	letter-spacing: -0.9px;
+	line-height: 40px;
+}
+
+/* 안전, 보통, 불가 부분 */
+.inputTxtAll {
+	display: none;
+}
+
+p.redTxt {
+	font-size: 15px;
+	letter-spacing: -0.6px;
+	color: #f23636;
+	padding-top: 10px;
+}
+
+p.redTxt img {
+	padding-left: 6px;
+	width: 16px;
+	height: 12px;
+}
+
+p.greenTxt {
+	font-size: 15px;
+	letter-spacing: -0.6px;
+	color: #14b76c;
+	padding-top: 10px;
+}
+
+p.greenTxt img {
+	padding-left: 6px;
+	width: 16px;
+	height: 12px;
+}
+
+p.yellowImg {
+	font-size: 15px;
+	letter-spacing: -0.6px;
+	color: #14b76c;
+	padding-top: 10px;
+}
+
+p.yellowImg img {
+	padding-left: 6px;
+	width: 16px;
+	height: 12px;
+}
+
+p.yellowImg span {
+	color: #ffc119;
+}
+
+/* == 안전, 보통, 불가 부분 끝 ==*/
+
+/* 비밀번호 입력 시 유의사항, 개인 정보 위탁 처리 */
+.PointPwBox {
+	height: 30px;
+}
+
+.point {
+	display: flex;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.point:hover {
+	cursor: pointer;
+}
+
+.point span {
+	font-size: 15px;
+	border-bottom: 1px solid #252525;
+	line-height: 1.3;
+	letter-spacing: -0.6px;
+}
+
+.point img {
+	width: 18px;
+	height: 18px;
+	margin-top: 2px;
+	margin-right: 5px;
+}
+
+p#pointPw {
+	float: right;
+}
+
+/* 비밀번호 입력 시 유의사항, 개인 정보 위탁 처리 더보기 */
+.pwPrecautions {
+	transform: translate(0%, 4%);
+}
+
+.perInfoPrecautions {
+	transform: translate(0%, -7%);
+}
+
+.pwPrecautions, .perInfoPrecautions {
+	width: 100%;
+	position: absolute;
+	padding: 20px;
+	border: 1px solid #6a9def;
+	border-radius: 6px;
+	background-color: #f8fbff;
+	box-shadow: 0 3px 4px 0 rgb(0 0 0/ 8%);
+	display: none;
+}
+
+.pwPrecautions img, .perInfoPrecautions img {
+	position: relative;
+	width: 15px;
+	height: 15px;
+	float: right;
+	bottom: 5px;
+	left: 5px;
+}
+
+.pwPrecautions img:hover, .perInfoPrecautions img:hover {
+	cursor: pointer;
+}
+
+.precautionsTxt {
+	font-size: 18px;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+
+.preTxt { /* 개인정보 */
+	font-size: 15px;
+	letter-spacing: -0.6px;
+}
+
+.pwPrecautions ul { /* 비밀번호 */
+	font-size: 13px;
+	letter-spacing: -0.6px;
+}
+
+.pwPrecautions ul li {
+	padding-left: 8px;
+	list-style: none;
+}
+
+.pwPrecautions  li.before1::before {
+	position: absolute;
+	left: 19px;
+	top: 64px;
+	width: 3px;
+	height: 3px;
+	border-radius: 50%;
+	background-color: #252525;
+	content: '';
+}
+
+.pwPrecautions ul li.before2::before {
+	position: absolute;
+	left: 19px;
+	top: 84px;
+	width: 3px;
+	height: 3px;
+	border-radius: 50%;
+	background-color: #252525;
+	content: '';
+}
+
+.pwPrecautions ul li.before3::before {
+	position: absolute;
+	left: 19px;
+	top: 121px;
+	width: 3px;
+	height: 3px;
+	border-radius: 50%;
+	background-color: #252525;
+	content: '';
+}
+
+/* 약관 동의 */
+.clauseInfo {
+	display: block;
+	margin-top: 36px;
+	margin-bottom: 30px;
+	padding: 0 17px;
+	border: 1px solid #e5e5e5;
+	border-radius: 6px;
+}
+
+.clauseInfo input {
+	opacity: 1;
+	width: 0;
+	height: 0;
+}
+
+.clauseInfo li {
+	margin-top: 12px;
+}
+
+.checkOff img, .checkOn img {
+	width: 21px;
+	height: 21px;
+	position: absolute;
+	margin-top: 3px;
+}
+
+.clauseInfo label span.checkOn { /* 체크동그라미 */
+	display: none;
+}
+
+.agreeTitle {
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 27px;
+}
+
+.agreeList .btnMore img {
+	width: 7px;
+	height: 13px;
+}
+
+.agreeList label {
+	margin-top: 12px;
+}
+
+.agreeTxt {
+	font-size: 16px;
+	line-height: 21px;
+	position: relative;
+	left: 27px;
+}
+
+#titleMember, #titleSns {
+	margin-top: 30px;
+}
+
+/* 모든 약관 및 정보 수신 동의 */
+.agreeBigTitle {
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 27px;
+	position: relative;
+	left: 37px;
+}
+
+.agreeFirst {
+	padding: 15px 0;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.agreeFirst button {
+	background-color: #fff;
+	border: none;
+	float: right;
+	padding-top: 3.5px;
+}
+
+.boxOpen {
+	display: none;
+}
+
+.agreeFirst button span img {
+	width: 18px;
+	height: 18px;
+}
+
+#checkOnBig img, #checkOffBig img {
+	width: 27px;
+	height: 27px;
+	position: absolute;
+}
+
+#checkOnBig img { /* 체크동그라미 */
+	display: none;
+}
+
+/* 뷰티포인트 통합회원 약관 */
+#titleBeauty {
+	margin-top: 20px;
+	margin-bottom: 12px;
+}
+
+#agreeBeauty label {
+	position: relative;
+}
+
+#btnMoreBu img {
+	position: relative;
+	float: right;
+	top: 9px;
+}
+
+/* 에스쁘아 회원 약관 */
+#agreeMember ul {
+	list-style: none;
+}
+
+.btnMore img {
+	position: relative;
+	float: right;
+	top: -18px;
+}
+
+/* 에스쁘아 광고성 정보 수신 동의 */
+.sns {
+	margin-bottom: 20px;
+}
+
+#titleSns {
+	margin-bottom: 12px;
+}
+
+/* 약관 동의 더보기들 */
+.bg { /* 팝업창 배경 */
+	position: fixed;
+	background: rgba(0, 0, 0, 0.5);
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+	display: none;
+}
+
+.more {
+	background-color: #fff;
+	position: absolute;
+	width: 100%;
+	height: auto;
+	padding: 35px 20px 20px;
+	text-align: left;
+	border-radius: 8px;
+	z-index: 2;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+}
+
+.more h2 {
+	font-size: 22px;
+	margin-bottom: 25px;
+	letter-spacing: -1px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.moreTxt {
+	padding-right: 13px;
+	margin-right: -13px;
+}
+
+.moreTxt p {
+	margin-top: 10px;
+}
+
+.subtitle {
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.strongTxt {
+	font-size: 16.8px;
+	font-weight: 700;
+}
+
+.nomalTxt, .agree-list-num {
+	font-size: 14px;
+	line-height: 1.4;
+}
+
+.more h6, .more h5 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.addenda ul li {
+	display: flex;
+}
+
+.add-date, .add {
+	font-size: 13px;
+}
+
+.add-date {
+	padding-right: 22px;
+}
+
+#serviceBox {
+	height: 343px;
+	overflow-y: scroll;
+}
+
+/* 스크롤 */
+#serviceBox::-webkit-scrollbar {
+	width: 6px;
+	height: 20px;
+}
+
+#serviceBox::-webkit-scrollbar-thumb {
+	background-color: #cccccc;
+	border-radius: 10px;
+}
+
+#serviceBox::-webkit-scrollbar-track {
+	background-color: #fff;
+}
+
+/* 스크롤 끝 ========== */
+.moreTxt ul {
+	list-style: none;
+}
+
+.buttonClose {
+	margin-top: 20px;
+}
+
+.buttonClose button {
+	background-color: #5c95f0;
+	border: 1px solid #5c95f0;
+	border-radius: 6px;
+	width: 100%;
+	height: 49px;
+	letter-spacing: -0.8px;
+	font-weight: 400;
+	font-size: 18px;
+	color: #fff;
+	font-family: "Noto Sans KR", "돋움", dotum, sans-serif;
+}
+
+.buttonClose button:hover {
+	cursor: pointer;
+}
+
+/* 가입 버튼 */
+.joinButton {
+	margin-top: 30px;
+}
+
+button.join {
+	margin: 0 5px;
+	background-color: #f0f0f0;
+	border: 1px solid #f0f0f0;
+	border-radius: 6px;
+	width: 100%;
+	height: 54px;
+	font-family: "Noto Sans KR", "돋움", dotum, sans-serif;
+	letter-spacing: -0.8px;
+	font-weight: 400;
+	font-size: 18px;
+	color: #c6c6c6;
+}
+
+/* button.join span { */
+/* 	font-size: 18px; */
+/* 	color: #c6c6c6; */
+/* } */
+
+.joinTxt {
+	margin: 15px 0;
+	text-align: center;
+	color: #898989;
+	letter-spacing: -0.7px;
+	font-size: 16px;
+}
+
+button.join:hover {
+	cursor: not-allowed;
+}
+
+/* 미디어쿼리 */
+@media screen and (min-width: 768px) {
+	.signUpBox, section {
+		max-width: 520px;
+		margin: 0 auto;
+		font-size: 16px;
+	}
+	.pwPrecautions {
+		max-width: 480px;
+	}
+	.perInfoPrecautions {
+		max-width: 428px;
+	}
+	.more {
+		max-width: 375px;
+	}
+}

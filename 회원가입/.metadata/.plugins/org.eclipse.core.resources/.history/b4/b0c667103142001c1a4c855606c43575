@@ -1,0 +1,30 @@
+package signup;
+
+import java.util.ArrayList;
+
+public class memberInfo {
+	private String ID;
+	private String PW;
+	private ArrayList<memberInfo> list;
+
+	public String getID() {
+		return ID;
+	}
+
+	public void setID(String iD) {
+		ID = iD;
+	}
+
+	public String getPW() {
+		return PW;
+	}
+
+	public void setPW(String pW) {
+		PW = pW;
+	}
+
+}
+
+public void MemberArrayList() {
+	list = new ArrayList<memberInfo>();
+}

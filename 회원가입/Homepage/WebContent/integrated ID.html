@@ -89,9 +89,8 @@
                 <form action="" name="agreeBox">
                     <div class="agreeFirst">
                         <input type="checkbox">
-                          <label><span id="checkOffBig" onclick="checkOffBtn()"><img src="Images/btn_check_off.png"></span><span id="checkOnBig"><img src="Images/btn_check_on.png"></span><span class="agreeBigTitle">모든 약관 및 정보 수신 동의</span></label>
-                          <button><span class="boxFold" onclick="boxFlodBtn()"><img src="Images/btn_box_fold.png"></span></button>
-                          <button><span class="boxOpen"><img src="Images/btn_box_open.png"></span></button>
+                          <label><span id="checkOffBig"><img src="Images/btn_check_off.png" class="chBigOff"></span><span class="agreeBigTitle">모든 약관 및 정보 수신 동의</span></label>
+                          <button type="button"><img src="Images/btn_box_fold.png" class="boxFold"></button>
                     </div>
 
                     <!-- 뷰티포인트 통합회원 약관 -->
@@ -115,7 +114,7 @@
                         </div>
 
                         <div class="buttonClose">
-                            <button id="colse" onclick="beautyCloseBtn()">닫기</button>
+                            <button id="colse" onclick="beautyCloseBtn()" type="button">닫기</button>
                         </div>
                     </div>
                     <div class="bg"></div>
@@ -772,7 +771,7 @@
                         </div>
 
                         <div class="buttonClose">
-                            <button id="colse" onclick="collectionCloseBtn()">닫기</button>
+                            <button id="colse" onclick="collectionCloseBtn()" type="button">닫기</button>
                         </div>
                     </div>
                     <div class="bg"></div>
@@ -789,7 +788,7 @@
                         </div>
 
                         <div class="buttonClose">
-                            <button id="colse" onclick="marketingCloseBtn()">닫기</button>
+                            <button id="colse" onclick="marketingCloseBtn()" type="button">닫기</button>
                         </div>
                     </div>
                     <div class="bg"></div>
@@ -802,7 +801,7 @@
                     </div>
 
                     <!-- 개인정보 처리 위탁에 대한 안내 -->
-                    <p class="point" id="perpoint" onclick="precautionsPoint()"><img src="Images/Icon_info.png"><span>개인정보 처리 위탁에 대한 안내</span></p>
+                    <p class="point" id="perpoint" onclick="precautionsPoint()"><img src="Images/Icon_info.png" class="preIcon"><span>개인정보 처리 위탁에 대한 안내</span></p>
 
                     <!-- 개인정보 처리 위탁에 대한 안내 더보기 -->    
                     <div class="perInfoPrecautions">
@@ -818,14 +817,30 @@
 
         <!-- 가입 버튼 -->
         <section class="joinButton">
-        	<input type="submit" value="회원가입" id="join">
-<!--             <button type="submit" class="join" onclick="">동의하고 가입</button> -->
+        	<input type="submit" value="회원가입" id="join" disabled>
+      <!-- <button type="submit" class="join" onclick="">동의하고 가입</button> -->
             <p class="joinTxt">가입 필수 정보 및 약관을 모두 확인해주세요.</p>
         </section>
       </section>
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script>
+        // 전체 약관 동의 버튼
+        $(".chBigOff").on("click", function() {
+            var src = ($(this).attr("src") === "Images/btn_check_off.png")
+                ? "Images/btn_check_on.png"
+                : "Images/btn_check_off.png"
+              $(this).attr("src", src);
+
+            $(".chOff").attr("src", "Images/btn_check_on.png");
+
+          // 회원가입 버튼 활성화
+          $("#join").css("cursor", "pointer").css("backgroundColor", "#5c95f0").css("color", "#fff");
+          $("#join").removeAttr("disabled");
+        	}
+        );
+
+        // 약관 동의 버튼
         $('.chOff').on({
         	'click': function() {
         		var src = ($(this).attr('src') === 'Images/btn_check_off.png')
@@ -833,6 +848,30 @@
         			: 'Images/btn_check_off.png'
         		$(this).attr('src', src);
         	}
+        });
+
+        // 약관 동의 접기
+        $(".boxFold").on("click", function() {
+          if($(this).attr("src") == "Images/btn_box_fold.png" ) {
+          var src = ($(this).attr("src") === "Images/btn_box_fold.png")
+            ? "Images/btn_box_open.png"
+            : "Images/btn_box_fold.png"
+            $(this).attr('src', src);
+
+          $(".agreeList").css("display", "none");
+          $(".sns").css("display", "none");
+          $("#perpoint").css("display", "none");
+          } else {
+          var src = ($(this).attr("src") === "Images/btn_box_fold.png")
+            ? "Images/btn_box_open.png"
+            : "Images/btn_box_fold.png"
+            $(this).attr('src', src);
+
+          $(".agreeList").css("display", "block");
+          $(".sns").css("display", "block");
+          $("#perpoint").css("display", "block");
+          $(".preIcon").css("position", "relative").css("top", "4px");
+          } 
         });
         </script>
 </body>

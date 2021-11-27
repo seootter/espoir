@@ -88,6 +88,10 @@ div {
 
     display: none;
 }
+
+.inputName img:hover, .inputTel img:hover {
+    cursor: pointer;
+}
 /* == x 부분 끝 ==*/
 
 input#name, input#tel {

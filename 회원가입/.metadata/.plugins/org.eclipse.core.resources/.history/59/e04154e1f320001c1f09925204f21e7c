@@ -1,0 +1,15 @@
+package test;
+
+import java.util.Random;
+
+public class SutdaCard {
+	Random random = new Random();
+	
+	int num;
+	boolean isKwang;
+	
+	num = random.nextInt(10)+1;
+	
+	if(isKwang == "±¤") isKwang = true;
+	else isKwang = false;
+}

@@ -32,14 +32,14 @@
 
                     <!-- 휴대폰번호 -->
                     <div class="inputTel">
-                        <input type="tel" id="tel" maxlength="11" placeholder="휴대폰 번호 입력 ('-' 생략)" onkeydown="inputTel()">
+                        <input type="text" id="tel" maxlength="11" placeholder="휴대폰 번호 입력 ('-' 생략)" onkeydown="inputTel()">
                         <img src="imges/btn_textfield_delete.png" onclick="deleteBtnTel()">
                     </div>
                </div>
          
          <!-- 인증번호 발송 -->
          <section class="sendSns">
-            <button class="send"><span>인증번호 발송</span></button>
+            <button class="send" disabled><span>인증번호 발송</span></button>
          </section>
 
          <!-- sns 로그인 -->

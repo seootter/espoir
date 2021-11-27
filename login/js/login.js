@@ -29,6 +29,7 @@ function inputId() {
         loginBtn.style.borderColor = "#5c95f0";
         loginBtnSpan.style.color = "#fff";
         loginBtn.style.cursor = "pointer";
+        loginBtn.disabled = false;
     }
 }
 
@@ -46,9 +47,11 @@ function inputPw() {
         loginBtn.style.borderColor = "#5c95f0";
         loginBtnSpan.style.color = "#fff";
         loginBtn.style.cursor = "pointer";
+        loginBtn.disabled = false;
     }
 }
 
+// 정보입력칸 x
 function deleteBtnId() {
     let inputIdImg = document.querySelector(".inputId img");
     let inputId = document.querySelector("#id");

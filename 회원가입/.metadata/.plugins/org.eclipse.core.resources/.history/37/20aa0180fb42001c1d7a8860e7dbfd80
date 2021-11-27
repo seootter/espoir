@@ -1,0 +1,31 @@
+package signup;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/signup2")
+public class SignUp2 extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	private ArrayList<String> MemberInfo;
+       // 아이디 중복 확인
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String id = request.getParameter("id");
+		// 아이디 중복 확인
+		if(MemberInfo.contains(id)) {
+			response.setStatus(401);
+		}else {
+			MemberInfo.add(id);
+			// 이상 없을 시 다음 회원가입 단계로 넘어가기
+			RequestDispatcher rd = request.getRequestDispatcher("/signup3");
+			rd.forward(request, response);
+		}
+	}
+
+}
