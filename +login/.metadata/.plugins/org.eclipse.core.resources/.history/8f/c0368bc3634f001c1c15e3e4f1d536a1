@@ -1,0 +1,36 @@
+package dbmstest;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class DBMSEx1 {
+	public static void main(String[] args) {
+		try {
+			Class.forName("org.mariadb.jdbc.Driver");
+			
+			Connection connection = DriverManager.getConnection("jdbc:mariadb://localhost:3306/memberinfo?user=root&password=0000"); // DB에 연결
+			
+			String sql = "INSERT INTO memberinfo(id,pw) VALUES(?,?)";
+			
+			String id = "1234";
+			String pw = "12345678";
+			
+			PreparedStatement pstmt = connection.prepareStatement(sql);
+			
+			pstmt.setString(1, id);
+			pstmt.setString(2, pw);
+			
+			pstmt.executeUpdate();
+			
+			pstmt.close();
+			connection.close();
+			
+		} catch (ClassNotFoundException e) {
+			System.out.println("드라이버 로딩 실패");
+		} catch (SQLException e) {
+			System.out.println("DBMS 접속 실패");
+		}
+	}
+}

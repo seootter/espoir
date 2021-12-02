@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>로그인ㅣ옴니통합회원</title>
+   <link rel="stylesheet" href="CSS/login.css">
+   <script src="js/login.js"></script>
+</head>
+<body>
+    <!-- header -->    
+    <!-- 로그인 -->
+    <header class="loginInfo">
+      <div class="loginBox">
+          <h1>로그인</h1>
+          <button class="close"><img src="Images/btn_title_close.png"></button>
+      </div>
+   </header>
+
+  <!-- section -->
+   <section id="allBox">
+      <!-- pc 키보드 보기 -->
+      <section class="keyboardInfo" onclick="keyboardOpen()">
+         <p><span class="keyboardTxt">pc 키보드 보기</span><span class="keyboardOpen"><img src="Images/btn_keyboard_open.png"></span></p>
+         <span class="keyboard"><img src="Images/img_keyboard.png"></span>
+      </section>
+
+      <!-- 정보 입력칸 -->
+      <section class="inputInfo">
+         <div class="inputBox">
+            <form action="/login1" method="POST" name="inputUser">
+               <!-- 아이디 -->
+               <div class="inputId">
+                     <input type="text" id="id" minlength="4" name="Id" maxlength="12" placeholder="아이디 입력" onkeydown="inputId()"> 
+                     <img src="Images/btn_textfield_delete.png" onclick="deleteBtnId()">
+               </div>
+
+               <!-- 비밀번호 -->
+               <div class="inputPw">
+                     <input type="password" id="password" name="Pw"minlength="8" maxlength="16" placeholder="비밀번호 입력 (영문, 숫자, 특수문자 조합)" onkeydown="inputPw()">
+                     <img src="Images/btn_textfield_delete.png" onclick="deleteBtnPw()">
+               </div>
+               
+                <!-- 로그인 버튼 -->
+      <section class="loginButtonBox">
+         <button type="button" class="loginButton" onclick="" disabled><span>로그인</span></button>
+      </section>
+             </form>
+           </div>
+	
+      <!-- 아이디 저장 -->
+      <section class="saveInfo">
+         <form action="" method="" name="agreeBox">
+            <div class="saveBox" onclick="saveClick()">
+               <input type="checkbox" name="save">
+               <label><span id="checkOff"><img src="Images/btn_check_off.png"></span><span id="checkOn"><img src="Images/btn_check_on.png"></span><span class="save">아이디 저장</span></label>
+            </div>
+      </section>
+
+      <!-- sns 로그인 -->
+      <section class="snsButton">
+         <div class="snsButtonBox">
+            <ul>
+               <li>
+                  <button id="mobile">
+                  <img src="Images/btn_login_mobile.png">
+                  <p>휴대폰<br>로그인</p>
+                  </button>
+               </li>
+               <li>
+                  <button id="kakao">
+                  <img src="Images/btn_login_ka.png">
+                  <p>카카오<br>로그인</p>
+                  </button>
+               </li>
+               <li>
+                  <button id="nvaer">
+                  <img src="Images/btn_login_na.png">
+                  <p>네이버<br>로그인</p>
+                  </button>
+               </li>
+               <li>
+                  <button id="more" onclick="moreBtn()" type="button">
+                  <img src="Images/btn_login_more.png">
+                  <p>더보기</p>
+                  </button>
+               </li>
+            </ul>
+         </div>
+      </section>
+
+      <!-- sns 로그인 더보기 -->
+      <div id="snsMoreInfo">
+         <h2>간편 로그인</h2>
+
+         <div class="moreTxt" id="snsMoreBox">
+            <ul>
+               <li>
+                  <button>
+                  <img src="Images/btn_login_mobile.png">
+                  <p>휴대폰 로그인</p>
+                  </button>
+               </li>
+               <li>
+                  <button>
+                  <img src="Images/btn_login_ka.png">
+                  <p>카카오 로그인</p>
+                  </button>
+               </li>
+               <li>
+                  <button>
+                  <img src="Images/btn_login_na.png">
+                  <p>네이버 로그인</p>
+                  </button>
+               </li>
+               <li>
+                  <button>
+                  <img src="Images/btn_login_fb.png">
+                  <p>페이스북 로그인</p>
+                  </button>
+               </li>
+            </ul>
+         </div>
+
+         <div class="buttonClose">
+             <button id="colse" onclick="closeMore()" type="button">닫기</button>
+         </div>
+     </div>
+     <div class="bg"></div>
+
+
+      <!-- 찾기 -->
+      <section class="find">
+         <ul>
+            <li><a href="#">아이디 찾기</a></li>
+            <li class="line"> </li>
+            <li><a href="#">비밀번호 찾기</a></li>
+            <li class="line"> </li>
+            <li><a href="#">비회원 주문/조회</a></li>
+         </ul>
+      </section>
+      
+      <!-- 회원가입 버튼 -->
+      <section class="singup">
+         <button class="singupButton" type="button">
+            <p id="noMember">아직 회원이 아니세요?</p>
+            <p id="strong"><span>회원가입</span><img src="Images/icon_signup_arrow.png"></p>
+         </button>
+      </section>
+   </section>
+</body>
+</html> 
