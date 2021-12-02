@@ -21,6 +21,13 @@
     font-style: normal;
 }
 
+@font-face {font-family: 'yoon';
+	src: url('/resources/css/font/YoonGothicPro740.eot');
+	src: url('/resources/css/font/YoonGothicPro740.eot?#iefix') format('embedded-opentype'),
+	url('/resources/css/font/YoonGothicPro740.woff') format('woff'),
+	url('/resources/css/font/YoonGothicPro740.ttf') format('truetype'),
+	url('/resources/css/font/YoonGothicPro740.svg#wf') format('svg');}
+
 /* Marian 폰트 대체 */
 @font-face {
     font-family: 'PPPangramSans-Thin';
@@ -57,6 +64,22 @@
     font-style: normal;
 }
 
+@font-face {font-family: 'Marian';
+	src: url('/resources/css/font/36660E_0_0.eot');
+	src: url('/resources/css/font/36660E_0_0.eot?#iefix') format('embedded-opentype'),
+	url('/resources/css/font/36660E_0_0.woff2') format('woff2'),
+	url('/resources/css/font/36660E_0_0.woff') format('woff'),
+	url('/resources/css/font/36660E_0_0.ttf') format('truetype'),
+	url('/resources/css/font/36660E_0_0.svg#wf') format('svg');}
+
+@font-face {font-family: 'Marian';
+	font-weight:bold;
+	src: url('/resources/css/font/36660E_2_0.eot');
+	src: url('/resources/css/font/36660E_2_0.eot?#iefix') format('embedded-opentype'),
+	url('/resources/css/font/36660E_2_0.woff2') format('woff2'),
+	url('/resources/css/font/36660E_2_0.woff') format('woff'),
+	url('/resources/css/font/36660E_2_0.ttf') format('truetype'),
+	url('/resources/css/font/36660E_2_0.svg#wf') format('svg');}
 
 /* css */
 * {
@@ -86,7 +109,47 @@ a {
 /* 메인 배너 */
 
 /* lookbook */
+.lookbook {
+    background-color: rgb(224, 206, 199);
+    padding: 92px 0;
+    text-align: center;
+}
 
+.plus {
+    background: url(/main/images/lb_plus_m.png);
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+/* meetsgray */
+#meetsgray_1 {
+    position: relative;
+    width: auto;
+    height: 100%;
+}
+
+#noze {
+    position: absolute;
+    left: 50%;
+}
+
+#meetsgray_plus {
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    right: 0;
+}
+
+
+.meetsgray_text {
+    font-weight: 700;
+    font-family: 'Marian', sans-serif;
+    font-size: 120px;
+    line-height: 1;
+    color: #fff;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
 /* live&more */
 
 /* hot tok */
@@ -184,7 +247,7 @@ footer {
 }
 
 .chatTel {
-    font-family: 'Pretendard-Regular';
+    font-family: 'Marian';
     font-size: 20px;
     font-weight: bold;
 
@@ -204,11 +267,6 @@ footer {
     display: block;
     padding-left: 145px;
 }
-
-.snsIcon {
-    
-}
-
 
 /* footer_bottom */
 .footer_bottom {
@@ -258,4 +316,12 @@ footer {
 .copyright {
     margin-top: 27px;
     font-size: 13px;
+}
+
+/* 미디어쿼리 */
+@media screen and (max-width: 1440px) {
+    #meetsgray_1 {
+        width: auto;
+        height: 100%;
+    }
 }
