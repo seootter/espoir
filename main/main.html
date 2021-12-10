@@ -6,9 +6,15 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Expect better you-에스쁘아</title>
    <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
    <!-- header -->
+   <div class="slider">
+      <div>I am a slide.</div>
+      <div>I am another slide.</div>
+    </div>
    <header>
       <div class="headerlnner">
          <a href="https://www.espoir.com/ko/main.do"><img src="images/logo_w_m.png"></a>
@@ -36,95 +42,141 @@
    
    <!-- lookbook -->
    <section class="lookbook">
+
       <!-- meetsGray -->
       <div class="meetsGray">
          <img src="images/lookbook/meetsgray_1.jpg" id="meetsgray_1" width="1920" height="715">
          <img src="images/lookbook/noze.jpg" id="noze" width="546" height="734">
          <button id="meetsgray_plus1" class="plus"></button>
-         <img src="images/lookbook/meetsgray_2.jpg" id="meetsgray_2" width="470" height="455">
-         <button id="meetsgray_plus2" class="plus"></button>
-         <img src="images/lookbook/glowbase_1.jpg" id="glowbase_1" width="742" height="455">
-         <button id="glowbase_plus1" class="plus"></button>
-         <p class="meetsgray_text">MEETS GRAY LOOK</p>
+         <p id="meetsgray_text" class="lbText" >MEETS GRAY LOOK</p>
+         <p id="meetSpace"></p>
+         <div class="mettsgrayImg">
+            <img src="images/lookbook/meetsgray_2.jpg" id="meetsgray_2" width="470" height="455">
+            <button id="meetsgray_plus2" class="plus"></button>
+            <img src="images/lookbook/glowbase_1.jpg" id="glowbase_1" width="742" height="455">
+            <button id="glowbase_plus1" class="plus"></button>
+         </div>
       </div>
+
       <!-- glowBase -->
       <div class="glowBase">
-         <p class="glowbase_text">GLOW BASE</p>
+         <p id="glowbase_text" class="lbText">GLOW BASE</p>
          <img src="images/lookbook/glowbase_2.jpg" id="glowbase_2" width="700" height="906">
          <button id="glowbase_plus2" class="plus"></button>
          <img src="images/lookbook/glowbase_3.jpg" id="glowbase_3" width="700" height="906">
          <button id="glowbase_plus3" class="plus"></button>
-         <p class="glowbase_text2">LOOK BOOK</p>
+         <p id="glowbase_text2" class="lbText">LOOK BOOK</p>
       </div>
+
       <!-- autumn -->   
       <div class="autumn">
-         <p class="autumn_text">AUTUMN LOOK</p>
-         <img src="images/lookbook/autumn_1.jpg" id="autumn_1" width="380" height="380">
-         <button id="autumn_plus1" class="plus"></button>
-         <img src="images/lookbook/autumn_2.jpg" id="autumn_2" width="604" height="810">
-         <button id="autumn_plus2_1" class="plus"></button>
-         <button id="autumn_plus2_2" class="plus"></button>
-         <button id="autumn_plus2_3" class="plus"></button>
-         <button id="autumn_plus2_4" class="plus"></button>
-         <img src="images/lookbook/autumn_3.jpg" id="autumn_3" width="470" height="654">
-         <button id="autumn_plus3_1" class="plus"></button>
-         <button id="autumn_plus3_2" class="plus"></button>
-         <button id="autumn_plus3_3" class="plus"></button>
+         <div class="autumnBox">
+            <p id="autumn_text" class="lbText">
+               <span>A</span>
+               <span>U</span>
+               <span>T</span>
+               <span>U</span>
+               <span>M</span>
+               <span class="space">N</span>
+               <span>L</span>
+               <span>O</span>
+               <span>O</span>
+               <span>K</span>
+            </p>
+            <img src="images/lookbook/autumn_1.jpg" id="autumn_1" width="380" height="380">
+            <button id="autumn_plus1" class="plus"></button>
+            <img src="images/lookbook/autumn_2.jpg" id="autumn_2" width="604" height="810">
+            <button id="autumn_plus2_1" class="plus"></button>
+            <button id="autumn_plus2_2" class="plus"></button>
+            <button id="autumn_plus2_3" class="plus"></button>
+            <button id="autumn_plus2_4" class="plus"></button>
+            <img src="images/lookbook/autumn_3.jpg" id="autumn_3" width="470" height="654">
+            <button id="autumn_plus3_1" class="plus"></button>
+            <button id="autumn_plus3_2" class="plus"></button>
+            <button id="autumn_plus3_3" class="plus"></button>
+         </div>
       </div>
+
       <!-- pillowPeach -->       
       <div class="pillowPeach">
          <img src="images/lookbook/pillowPeach_bg.jpg" id="pillowPeach_bg" width="1920" height="715">
          <img src="images/lookbook/pillowPeach_1.jpg" id="pillowPeach_1" width="546" height="734">
          <button id="pillowPeach_plus1" class="plus"></button>
-         <p class="pillowPeach_text">PILLOW PEACH LOOK</p>
+         <p id="pillowPeach_text" class="lbText">PILLOW PEACH LOOK</p>
          <img src="images/lookbook/pillowPeach_2.jpg" id="pillowPeach_2" width="470" height="455">
          <button id="pillowPeach_plus2" class="plus"></button>
          <img src="images/lookbook/pillowPeach_3.jpg" id="pillowPeach_3" width="742" height="455">
          <button id="pillowPeach_plus3" class="plus"></button>
+      </div>
 
-         <a href="/ko/shop/bt/shop_bt_lookbook_list.do" class="viewMore_text">VIEW MORE
+      <!-- viewmore -->
+      <div class="viewMore">
+         <a href="/ko/shop/bt/shop_bt_lookbook_list.do" class="viewMore_text">
+            <span>VIEW MORE</span>
             <img src="images/btn_arr_02.png" class="btn_viewMore"></a>
       </div>
+
       <!-- lb_bottom -->        
       <div class="lb_bottom">
-         <p class="better">BETTER YOU</p>
-         <p class="expect">EXPECT</p>
-         <p class="better2">BETTER YOU</p>
+         <p>
+            <span class="better">BETTER YOU</span>
+            <span class="expect" id="better2">EXPECT</span>
+            <span class="better">BETTER YOU</span>
+            <span class="expect" id="expect2">EXPECT</span>
+         </p>
       </div>
    </section>
 
    <!-- live&more -->
    <section class="livemore">
-      <p class="live_tit">LIVE &amp; MORE</p>
-      <p class="live_textList" id="live_text">
-         [🌟단독 공개] 홀리뱅 제인 역대급 메이크오버 / 방송 비하인드 썰 + 댄스 대.공.개
-      </p>
-      <h1>
-         화제의 1등 댄서 팀!
-         <a href="https://www.youtube.com/hashtag/%ED%99%80%EB%A6%AC%EB%B1%85">#홀리뱅</a> 
-         <a href="https://www.youtube.com/hashtag/%EC%A0%9C%EC%9D%B8">#제인</a> 님이 
-         <a href="https://www.youtube.com/hashtag/%EC%97%90%EC%8A%A4%EC%81%98%EC%95%84">#에스쁘아</a> 
-         <a href="https://www.youtube.com/hashtag/%ED%81%AC%EB%A3%A8%EB%B0%8B%EC%B8%A0%EC%9C%A0">#크루밋츠유</a> 에 찾아오셨어요! 👏🏻👏🏻👏🏻
-      </h1>
-      <h1>방송에서는 다 보여주시지 못한 제인님의 끼와 매력을 특별한 메이크 오버와 함께 대. 공. 개 합니다!!🔥</h1>
-
-      <div>
-         <img data-src="https://img.youtube.com/vi/LFsEOmBr9e0/maxresdefault.jpg" width="830" height="467" src="https://img.youtube.com/vi/LFsEOmBr9e0/maxresdefault.jpg">
-         <img src="images/ico_play.png">
-         
+      <div class="liveBox">
+         <div class="liveLeft">
+            <p id="live_tit" class="centerText">LIVE &amp; MORE</p>
+            <p class="live_textList" id="live_text">
+               [🌟단독 공개] 홀리뱅 제인 역대급 메이크오버 / 방송 비하인드 썰 + 댄스 대.공.개
+            </p>
+            <p class="live_text2">
+               화제의 1등 댄서 팀!
+               <a href="https://www.youtube.com/hashtag/%ED%99%80%EB%A6%AC%EB%B1%85">#홀리뱅</a> 
+               <a href="https://www.youtube.com/hashtag/%EC%A0%9C%EC%9D%B8">#제인</a> 님이 
+               <a href="https://www.youtube.com/hashtag/%EC%97%90%EC%8A%A4%EC%81%98%EC%95%84">#에스쁘아</a> 
+               <a href="https://www.youtube.com/hashtag/%ED%81%AC%EB%A3%A8%EB%B0%8B%EC%B8%A0%EC%9C%A0">#크루밋츠유</a> 에 찾아오셨어요! 👏🏻👏🏻👏🏻
+            </p>
+            <p class="live_text2">방송에서는 다 보여주시지 못한 제인님의 끼와 매력을 특별한 메이크 오버와 함께 대. 공. 개 합니다!! 🔥</p>
+         </div>
+         <div class="liveRight">
+            <img data-src="https://img.youtube.com/vi/LFsEOmBr9e0/maxresdefault.jpg" width="830" height="467" src="https://img.youtube.com/vi/LFsEOmBr9e0/maxresdefault.jpg">
+         </div>
       </div>
    </section>
 
    <!-- hot tok -->
    <section class="hottok">
-      <p class="hot_tit">HOT TOK</p>
+      <p id="hot_tit" class="centerText">HOT TOK</p>
+      <div class="swiper-container">
+         <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/hottok/hottok_1.jpg"></div>
+            <div class="swiper-slide"><img src="images/hottok/hottok_2.jpg"></div>
+            <div class="swiper-slide"><img src="images/hottok/hottok_3.jpg"></div>
+            <div class="swiper-slide"><img src="images/hottok/hottok_4.jpg"></div>
+            <div class="swiper-slide"><img src="images/hottok/hottok_5.jpg"></div>
+            <div class="swiper-slide"><img src="images/hottok/hottok_6.jpg"></div>
+            <div class="swiper-slide"><img src="images/hottok/hottok_7.jpg"></div>
+            <div class="swiper-slide"><img src="images/hottok/hottok_8.jpg"></div>
+         </div>
+         <div class="swiper-button-prev"></div>
+         <div class="swiper-button-next"></div>
+         <div class="swiper-pagination"></div>
+      </div>
+      <div class="hottok_bg"></div>
+      <div class="hottok_bg2"></div>
    </section>
 
    <!-- 공지사항 -->  
    <section class="noticeBox">
       <ul>
          <li class="notice">공지사항</li>
-         <li class="noticeText">내용</li>
+         <li class="noticeText">에스쁘아 개인정보처리방침 변경 공지(9월 1일 字)</li>
          <li class="more"><a href="https://www.espoir.com/ko/customer/cs_notice_list.do">MORE</a></li>
       </ul>
    </section>
@@ -174,7 +226,7 @@
                   <li class="blog"><a href="https://blog.naver.com/espoir_story"><img src="images/ico_blog.png"></a></li>
                   <li class="mail"><a href="mailto:espoirmall@espoir.com"><img src="images/ico_mail.png"></a></li>
                </ul>
-               <ul>
+               <ul class="snsText">
                   <li><a href="#">로그인</a></li>
                   <li><a href="#">회원가입</a></li>
                </ul>
@@ -206,5 +258,35 @@
          </div>
       </div>
    </footer>
-</body>
+
+
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+   <!-- header bxslider -->
+   <script>
+      $('.slider').bxSlider();
+   </script>
+
+   <!-- hottok swiper -->
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   <script>
+      var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 4,
+        spaceBetween: 0,
+        loop: true,
+        centeredSlides: true,
+
+        pagination: {
+          el: ".swiper-pagination",
+          type: "progressbar"
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        }
+      });
+   </script>
+
+</head>
 </html>
